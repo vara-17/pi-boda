@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Boda de Natàlia & Andrés</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fuente pixel -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #f3efe7;
+      --card: #e6e0d4;
+      --screen: #cfe0d8;
+      --ink: #2f3a36;
+      --muted: #5f6f68;
+      --accent: #7da89b;
+      --border: #cbbfae;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:"Press Start 2P", monospace;
+      font-size:12px;
+      line-height:1.9;
+    }
+
+    header{
+      text-align:center;
+      padding:48px 20px 32px;
+    }
+
+    h1{
+      font-size:22px;
+      margin:16px 0;
+    }
+
+    .intro{
+      max-width:720px;
+      margin:0 auto;
+      color:var(--muted);
+    }
+
+    .date{
+      font-size:26px;
+      margin:24px 0;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top:28px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--ink);
+      background:var(--card);
+      border:3px solid var(--border);
+      padding:8px 12px;
+    }
+
+    main{
+      max-width:960px;
+      margin:0 auto;
+      padding:0 20px 64px;
+      display:grid;
+      gap:28px;
+    }
+
+    section{
+      background:var(--card);
+      border:4px solid var(--border);
+      padding:22px;
+    }
+
+    h2{
+      font-size:14px;
+      margin-top:0;
+      margin-bottom:16px;
+    }
+
+    ul{
+      padding-left:20px;
+      margin:0;
+    }
+
+    li{ margin-bottom:10px; }
+
+    .screen{
+      background:var(--screen);
+      border:4px solid #9fbfb4;
+      padding:16px;
+      margin-top:16px;
+      color:#2b3b36;
+    }
+
+    .two{
+      display:grid;
+      gap:20px;
+    }
+
+    form{
+      display:grid;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    input, select, textarea{
+      font-family:inherit;
+      font-size:11px;
+      padding:8px;
+      border:3px solid var(--border);
+      background:#fff;
+    }
+
+    textarea{ min-height:80px; }
+
+    button{
+      font-family:inherit;
+      padding:10px;
+      border:4px solid var(--ink);
+      background:var(--accent);
+      cursor:pointer;
+    }
+
+    footer{
+      text-align:center;
+      padding:36px 20px;
+      color:var(--muted);
+      border-top:4px solid var(--border);
+    }
+
+    @media(min-width:800px){
+      body{ font-size:13px; }
+      .two{ grid-template-columns:1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <p class="intro">
+    Queremos que formes parte de nuestra boda.  
+    Será un día muy especial y nos encantaría vivirlo contigo.
+  </p>
+
+  <h1>Natàlia & Andrés</h1>
+
+  <div class="date">14·03·2026</div>
+
+  <p class="intro">Masia Llorenç</p>
+
+  <nav>
+    <a href="#info">INFO</a>
+    <a href="#programa">PROGRAMA</a>
+    <a href="#dresscode">DRESS</a>
+    <a href="#alojamiento">DORMIR</a>
+    <a href="#transporte">TRANSPORTE</a>
+    <a href="#regalos">REGALOS</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INFO -->
+  <section id="info">
+    <h2>📍 INFORMACIÓN GENERAL</h2>
+    <ul>
+      <li><strong>Fecha:</strong> 14 de marzo de 2026</li>
+      <li><strong>Hora llegada aproximada:</strong> 15:15 h </li>      
+      <li><strong>Ubicación:</strong>Masia Llorenç
+        <br>&emsp; &emsp; &emsp; &emsp; &emsp;  Carretera, km 34, 5, 25752 Solsona, Lleida
+        <br> &emsp; &emsp; &emsp; &emsp; &emsp; 
+        <a href="https://maps.app.goo.gl/7cMagZ5jdur5K2o89" target="_blank"> Google Maps</a>
+      </li>
+      <li><strong>Parking:</strong> Gratuito en toda la masía. </li>      
+
+    </ul>
+
+    <div class="screen">
+      Se recomienda llegar con tiempo  
+      para no perderse ningún byte importante 🐾
+    </div>
+  </section>
+
+  <!-- PROGRAMA -->
+  <section id="programa">
+    <h2>🕒 PROGRAMA DEL DÍA</h2>
+    <ul>
+      <li>15:15 · Llegada invitados</li>
+      <li>15:55 · Ceremonia</li>
+      <li>16:45 · Momento fotos y aperitivo</li>
+      <li>17:30 · Banquete</li>
+      <li>21:00 · Fiesta y baile</li>
+      <li>23:00 · Recena</li>
+      <li>01:30 · Fin oficial</li>
+      <li>01:31 · Lo que surja</li>
+    </ul>
+  </section>
+
+  <!-- DRESS CODE -->
+  <section id="dresscode">
+    <h2>👗 DRESS CODE</h2>
+    <ul>
+      <li>Podéis venir informales o más arreglad@s, como prefiráis; lo importante es que estéis cómod@s y a gusto… que guap@s estáis siempre 😉</li>
+
+      <li>Es marzo y estamos en la montaña, una chaqueta nunca sobra.</li>
+    </ul>
+
+    <div class="screen">
+      A Andrés le sobra la chaqueta, Natàlia llevaría tres.
+    </div>
+  </section>
+
+  <!-- ALOJAMIENTO -->
+  <section id="alojamiento">
+    <h2>🛏️ ALOJAMIENTO</h2>
+    <p>
+      Disponemos de diferentes ubicaciones para poder dormir. A las personas que pedísteis alojamiento en el formulario, os avisaremos si os hemos podido reservar espacio y os daremos las indicaciones necesarias.
+      <br>
+      <br>
+      Os recomendamos llegar con tiempo para encontrar vuestro alojamiento y dejar vuestras cosas. 
+    </p>
+  </section>
+
+  <!-- TRANSPORTE -->
+  <section id="transporte">
+    <h2>🚌 TRANSPORTE</h2>
+    Hemos organizado transporte para quienes lo solicitasteis en el formulario. Os avisaremos con horarios, puntos de recogida y toda la información necesaria.
+  </section>
+
+  <!-- REGALOS -->
+  <section id="regalos">
+    <h2>🎁 DETALLE </h2>
+    <p>
+      Celebrar este día con vosotros es más que suficiente.
+      Pero si os apetece aportar vuestro granito de arena para nuestro kit de supervivencia post-boda, aquí os dejamos cómo hacerlo:
+    </p>
+    <br>
+    <ul>
+      <li>Bizum: 660506642 o 675985138</li>
+      <li>Cuenta: ES28 0182 4311 9802 0213 4131</li>
+    </ul>
+    <br>
+    Y si el detalle viene en forma de abrazo, carta, baile épico o cualquier cosa hecha con cariño… nos hará igual de felices 💛
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>❓ PREGUNTAS FRECUENTES</h2>
+    <ul>
+      <li><strong>¿Lluvia?</strong> No pasará, pero hay plan B. Disponemos de una carpa donde poder refugiarnos. </li>
+      <li><strong>¿Frío?</strong> Seguro que si. Venid bien abrigados.</li>
+      <li><strong>¿Llegas antes?</strong> Avísanos con tiempo de cuando vas a llegar. </li>
+    </ul>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>📞 CONTACTO</h2>
+    <p>
+      Si necesitáis cualquier cosa, decídnoslo sin problema. <br>
+      Para sorpresas que queráis mantener en secreto, nuestras hermanas serán vuestras aliadas, que para nada han sido obligadas.
+    </p>
+    <ul>
+      <li>Andrés · 675985138
+        <ul>
+          <li>Laura · 615182341</li>
+        </ul>
+      </li>
+      <li>Natàlia · 660506642
+        <ul>
+          <li>Alicia · 680736092</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  Natàlia & Andrés · 14·03·2026  
+  <br>Web pixel-cat edition 🐈
+</footer>
+
+</body>
+</html>
