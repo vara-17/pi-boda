@@ -147,6 +147,10 @@
 
 <body>
 
+<audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <header>
   <p class="intro">
     <span data-lang="es">Queremos que formes parte de nuestra boda. 
@@ -165,6 +169,8 @@
   <div class="lang-switch">
     <button onclick="setLang('cat')">CAT</button>
     <button onclick="setLang('es')">ES</button>
+	<button onclick="toggleMusic()">🎵</button>
+
   </div>
 
   <nav>
@@ -281,6 +287,7 @@
 </section>
 
   <!-- REGALOS -->
+
 <section id="regalos">
   <h2>
     <span data-lang="es">🎁 DETALLES</span>
@@ -296,7 +303,7 @@
   </ul>
     <br>
     <span data-lang="es">Y si el detalle viene en forma de abrazo, carta, baile épico o cualquier cosa hecha con cariño… nos hará igual de felices 💛</span>
-    <span data-lang="cat">I si el detall ve en forma d'abraçada, carta, ball èpic o qualsevol altra cosa feta amb amor... ens farà igual de feliços 💛</span>
+    <span data-lang="cat">I si el detall ve en forma d'abraçada, carta, ball èpic o qualsevol altra cosa feta amb amor... ens farà igual de feliços. 💛</span>
     
 </section>
 
@@ -365,6 +372,17 @@ function setLang(lang){
   });
 }
 setLang('cat');
+</script>
+
+<script>
+function toggleMusic(){
+  const music = document.getElementById('bg-music');
+  if(music.paused){
+    music.play();
+  } else {
+    music.pause();
+  }
+}
 </script>
 
 </body>
