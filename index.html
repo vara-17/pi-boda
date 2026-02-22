@@ -375,14 +375,18 @@ setLang('cat');
 </script>
 
 <script>
-function toggleMusic(){
-  const music = document.getElementById('bg-music');
-  if(music.paused){
-    music.play();
-  } else {
-    music.pause();
-  }
-}
+const music = document.getElementById('bg-music');
+// Volumen bajo (0.0 a 1.0)
+music.volume = 0.2; // 20%
+
+// Velocidad más lenta (1 = normal)
+music.playbackRate = 0.85; // prueba entre 0.7 y 0.9
+
+// Que se detenga después de X segundos
+setTimeout(() => {
+  music.pause();
+  music.currentTime = 0; // vuelve al inicio
+}, 15000); // 15000 ms = 15 segundos
 </script>
 
 </body>
