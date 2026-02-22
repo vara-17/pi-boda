@@ -141,6 +141,19 @@
     @media(min-width:800px){
       body{ font-size:13px; }
       .two{ grid-template-columns:1fr 1fr; }
+	
+	.lang-switch button {
+	  font-size: 14px; /* o el que ya uses */
+	  display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	.icon-speaker {
+	  width: 1em;
+	  height: 1em;
+	  fill: #000;
+	}
     }
   </style>
 </head>
@@ -169,7 +182,13 @@
   <div class="lang-switch">
     <button onclick="setLang('cat')">CAT</button>
     <button onclick="setLang('es')">ES</button>
-	<button onclick="toggleMusic()">🎵</button>
+	<button onclick="toggleMusic()" class="music-btn">
+	  <svg viewBox="0 0 24 24" class="icon-speaker" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3 9V15H7L12 20V4L7 9H3Z"/>
+		<path d="M16 8C17.5 9.5 17.5 12.5 16 14" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+		<path d="M19 5C21.5 7.5 21.5 12.5 19 15" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+	  </svg>
+	</button>
 
   </div>
 
@@ -376,17 +395,40 @@ setLang('cat');
 
 <script>
 const music = document.getElementById('bg-music');
-// Volumen bajo (0.0 a 1.0)
-music.volume = 0.2; // 20%
 
-// Velocidad más lenta (1 = normal)
-music.playbackRate = 0.85; // prueba entre 0.7 y 0.9
+// 🔉 Volumen bajo
+music.volume = 0.10;
 
-// Que se detenga después de X segundos
-setTimeout(() => {
-  music.pause();
-  music.currentTime = 0; // vuelve al inicio
-}, 15000); // 15000 ms = 15 segundos
+// 🐢 Velocidad un poco más lenta
+music.playbackRate = 0.8;
+
+// ▶️ Intentar autoplay al cargar
+window.addEventListener('load', () => {
+  const playPromise = music.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Si el navegador bloquea autoplay, se activará al primer click
+    });
+  }
+});
+
+// 📱 Desbloqueo en móviles (primer toque en cualquier parte)
+document.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+  }
+}, { once: true });
+
+// ⏯ Botón para pausar/reanudar
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    document.getElementById('music-btn').textContent = "🔊 Música";
+  } else {
+    music.pause();
+    document.getElementById('music-btn').textContent = "🔇 Música";
+  }
+}
 </script>
 
 </body>
