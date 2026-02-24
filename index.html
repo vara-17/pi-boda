@@ -141,20 +141,36 @@
     @media(min-width:800px){
       body{ font-size:13px; }
       .two{ grid-template-columns:1fr 1fr; }
-	
-	.lang-switch button {
-	  font-size: 14px; /* o el que ya uses */
-	  display: inline-flex;
-	  align-items: center;
-	  justify-content: center;
-	}
+  
+  .lang-switch button {
+    font-size: 14px; /* o el que ya uses */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-	.icon-speaker {
-	  width: 1em;
-	  height: 1em;
-	  fill: #000;
-	}
+  .icon-speaker {
+    width: 1em;
+    height: 1em;
+    fill: #000;
+  }
     }
+
+
+  .music-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #000; /* controla el color del icono */
+  }
+
+  .icon-speaker {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
   </style>
 </head>
 
@@ -185,14 +201,16 @@
   </div>
 
   <div class="music">
-    <button onclick="toggleMusic()" class="music-btn">
-      <svg viewBox="0 0 24 24" class="icon-speaker" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 9V15H7L12 20V4L7 9H3Z"/>
-        <path d="M16 8C17.5 9.5 17.5 12.5 16 14" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M19 5C21.5 7.5 21.5 12.5 19 15" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
-      </svg>
-    </button>
-  </div>
+  <button onclick="toggleMusic()" class="music-btn">
+    <svg viewBox="0 0 24 24" class="icon-speaker" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 9V15H7L12 20V4L7 9H3Z" fill="currentColor"/>
+      <path d="M16 8C17.5 9.5 17.5 12.5 16 14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M19 5C21.5 7.5 21.5 12.5 19 15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+  </button>
+</div>
+
+
 
   <nav>
     <a href="#info"><span data-lang="es">INFO</span><span data-lang="cat">INFO</span></a>
